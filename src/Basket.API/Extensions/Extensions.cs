@@ -9,6 +9,7 @@ public static class Extensions
 {
     public static void AddApplicationServices(this IHostApplicationBuilder builder)
     {
+        Console.WriteLine("I'm adding to the code review here!");
         builder.AddDefaultAuthentication();
 
         builder.AddRedisClient("redis");

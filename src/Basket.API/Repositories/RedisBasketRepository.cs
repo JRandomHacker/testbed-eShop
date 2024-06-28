@@ -43,7 +43,7 @@ public class RedisBasketRepository(ILogger<RedisBasketRepository> logger, IConne
         }
 
 
-        logger.LogInformation("Basket item persisted successfully.");
+        logger.LogInformation("Basket item persisted mostly successfully.");
         return await GetBasketAsync(basket.BuyerId);
     }
 }

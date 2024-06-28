@@ -82,6 +82,10 @@ public static class OrdersApi
         try
         {
             var order = await services.Queries.GetOrderAsync(orderId);
+            if (order == null)
+            {
+                return TypedResults.NotFound();
+            }
             return TypedResults.Ok(order);
         }
         catch
